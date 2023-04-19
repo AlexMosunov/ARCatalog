@@ -7,7 +7,26 @@
 
 import Foundation
 
-class ARFurnitureModel {
+enum FurnitureItem: String, CaseIterable {
+    case cabinet, coffee, note, candle, Doguinho
+}
 
-    let itemsArray = ["cup", "vase", "boxing", "table"]
+struct FurnitureObject {
+    let name: String
+    var isSelected: Bool = false
+    var isPlaced: Bool = false
+}
+
+class ARFurnitureModel {
+    var itemsArray = FurnitureItem.allCases.map {
+        FurnitureObject(name: $0.rawValue)
+    }
+    var selectedIndex: IndexPath?
+    var selectedItem: FurnitureObject? {
+        guard let selectedIndex = selectedIndex,
+              itemsArray.count > selectedIndex.item else {
+            return nil
+        }
+        return itemsArray[selectedIndex.item]
+    }
 }
