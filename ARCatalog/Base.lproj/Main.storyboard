@@ -160,7 +160,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZB-gO-yKd">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZB-gO-yKd" customClass="VirtualObjectARView" customModule="ARCatalog" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                             </arscnView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ENV-q1-xW0">
@@ -203,16 +203,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dr-Bn-jXE">
+                                <rect key="frame" x="302" y="644" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="B6u-QN-UD8"/>
+                                    <constraint firstAttribute="width" constant="75" id="Ycg-81-KtW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Add"/>
+                                <connections>
+                                    <action selector="addObjectTapped:" destination="95E-8d-Wyn" eventType="touchUpInside" id="lgz-SX-rJo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ie2-Kj-7wS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ie2-Kj-7wS" firstAttribute="trailing" secondItem="8dr-Bn-jXE" secondAttribute="trailing" constant="16" id="6ph-q3-Aia"/>
                             <constraint firstItem="dZB-gO-yKd" firstAttribute="bottom" secondItem="Ie2-Kj-7wS" secondAttribute="bottom" id="9Ew-UT-1rG"/>
                             <constraint firstItem="dZB-gO-yKd" firstAttribute="trailing" secondItem="Ie2-Kj-7wS" secondAttribute="trailing" id="Ar5-DC-Fbv"/>
                             <constraint firstItem="dZB-gO-yKd" firstAttribute="leading" secondItem="Ie2-Kj-7wS" secondAttribute="leading" id="EcZ-lL-hJQ"/>
                             <constraint firstItem="dZB-gO-yKd" firstAttribute="top" secondItem="gtz-Rg-GGe" secondAttribute="top" id="Fmc-cH-iDp"/>
                             <constraint firstItem="ENV-q1-xW0" firstAttribute="trailing" secondItem="Ie2-Kj-7wS" secondAttribute="trailing" id="G9Y-fv-E95"/>
                             <constraint firstItem="ENV-q1-xW0" firstAttribute="bottom" secondItem="Ie2-Kj-7wS" secondAttribute="bottom" id="RRv-yV-eXr"/>
+                            <constraint firstItem="ENV-q1-xW0" firstAttribute="top" secondItem="8dr-Bn-jXE" secondAttribute="bottom" constant="24" id="RnX-rT-pB6"/>
                             <constraint firstItem="ENV-q1-xW0" firstAttribute="leading" secondItem="Ie2-Kj-7wS" secondAttribute="leading" id="byi-bm-5BK"/>
                         </constraints>
                     </view>
@@ -224,6 +238,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addObjectButton" destination="8dr-Bn-jXE" id="xjB-xf-RS4"/>
                         <outlet property="itemCollectionView" destination="ENV-q1-xW0" id="R88-lx-6GJ"/>
                         <outlet property="sceneView" destination="dZB-gO-yKd" id="Khe-FW-qu1"/>
                     </connections>
