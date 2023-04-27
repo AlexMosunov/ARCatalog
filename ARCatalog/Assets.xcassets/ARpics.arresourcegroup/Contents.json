@@ -1,0 +1,17 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "england.arreferenceimage"
+    },
+    {
+      "filename" : "iceland.arreferenceimage"
+    },
+    {
+      "filename" : "sharkAI.arreferenceimage"
+    }
+  ]
+}
