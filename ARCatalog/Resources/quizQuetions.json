@@ -1,0 +1,24 @@
+{
+    "iceland": {
+        "title": "Iceland",
+        "answers": ["A. Iceland","B. Germany","C. Denmark","D. Scotland"],
+        "correctAnswer": "A",
+        "question": "In which country is this building located?",
+        "imageName": "iceland_flag",
+        "description": "Hallgrímskirkja is a stunning Lutheran church located in the heart of Reykjavík, Iceland. It is one of the city's most iconic landmarks and an architectural marvel that draws visitors from all over the world.\nThe church stands at 73 meters tall and was named after Icelandic poet and clergyman Hallgrímur Pétursson. It took over 40 years to build, with construction beginning in 1945 and ending in 1986. The design of the church was inspired by Iceland's rugged landscapes and volcanic formations, with its unique shape resembling the columns of basalt rock that can be found throughout the country.",
+        "is3D": false,
+        "modelName": null,
+        "answeredCorrectly":false
+    },
+    "england": {
+        "title": "England",
+        "answers": ["A. Paris","B. Berlin","C. London","D. Edinburgh"],
+        "correctAnswer": "C",
+        "question": "In which city is this building located?",
+        "imageName": "england_flag",
+        "description": "Big Ben is one of the most famous landmarks in London, England, known for its iconic clock tower that stands at over 96 meters tall. The tower is officially called the Elizabeth Tower, but it is commonly referred to as Big Ben after the massive bell that rings out from within the tower.\nThe clock tower was completed in 1859 and has been an important part of London's skyline ever since. Its four clock faces are the largest in the world, each measuring over 7 meters in diameter. The tower also houses a spiral staircase with over 300 steps that lead up to the top.",
+        "is3D": true,
+        "modelName": "BigBenTower",
+        "answeredCorrectly":false
+    }
+}

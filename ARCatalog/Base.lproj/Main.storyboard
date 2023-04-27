@@ -42,7 +42,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="9Yg-uO-6si"/>
-                                                        <constraint firstAttribute="width" constant="100" id="NLC-7e-jru"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="NLC-7e-jru"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,6 +80,7 @@
                         <outlet property="collectionView" destination="Mvo-ml-pOa" id="Pcq-fP-owq"/>
                         <segue destination="BV1-FR-VrT" kind="show" id="Rq8-pc-TGF"/>
                         <segue destination="95E-8d-Wyn" kind="show" id="D9N-8k-byU"/>
+                        <segue destination="nuA-9y-OuH" kind="show" id="tUS-C8-cXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsZ-Hl-Fas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,7 +90,7 @@
         <!--Dice-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="ARViewController" id="BV1-FR-VrT" customClass="ARViewController" customModule="ARCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARDiceViewController" id="BV1-FR-VrT" customClass="ARDiceViewController" customModule="ARCatalog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -246,6 +247,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtK-cM-1vE" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1949" y="-492"/>
+        </scene>
+        <!--Image recognition-->
+        <scene sceneID="B6q-a0-Aoc">
+            <objects>
+                <viewController storyboardIdentifier="ARImageRecognitionVC" id="nuA-9y-OuH" customClass="ARImageRecognitionVC" customModule="ARCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L2R-yF-yJj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjf-RS-Qwr">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="MD6-aM-cvl">
+                                <rect key="frame" x="44" y="723" width="305" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKW-2i-D10">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="enB-yh-Tcc"/>
+                                            <constraint firstAttribute="width" constant="50" id="iQF-WD-muM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="A">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="quizAnswerButtonTapped:" destination="nuA-9y-OuH" eventType="touchUpInside" id="Uwg-Q0-ge6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ru-Cx-0ke">
+                                        <rect key="frame" x="85" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DgN-XW-lBc"/>
+                                            <constraint firstAttribute="width" constant="50" id="F8q-9b-OLA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="B">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="quizAnswerButtonTapped:" destination="nuA-9y-OuH" eventType="touchUpInside" id="ZZx-hg-41V"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpP-NR-7an">
+                                        <rect key="frame" x="170" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="EfV-PU-4dR"/>
+                                            <constraint firstAttribute="width" constant="50" id="hiK-Y8-QcN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="C">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="quizAnswerButtonTapped:" destination="nuA-9y-OuH" eventType="touchUpInside" id="4co-DR-TJE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXc-vB-MDK">
+                                        <rect key="frame" x="255" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Sjj-r5-8zP"/>
+                                            <constraint firstAttribute="width" constant="50" id="abw-Gt-n5l"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="D">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="quizAnswerButtonTapped:" destination="nuA-9y-OuH" eventType="touchUpInside" id="YZa-y4-eRx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qlc-Y0-2AQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cjf-RS-Qwr" firstAttribute="leading" secondItem="Qlc-Y0-2AQ" secondAttribute="leading" id="3ij-Tm-JCa"/>
+                            <constraint firstItem="Qlc-Y0-2AQ" firstAttribute="bottom" secondItem="MD6-aM-cvl" secondAttribute="bottom" constant="45" id="5bY-m0-F5c"/>
+                            <constraint firstItem="cjf-RS-Qwr" firstAttribute="top" secondItem="L2R-yF-yJj" secondAttribute="top" id="bfF-jd-ijq"/>
+                            <constraint firstItem="cjf-RS-Qwr" firstAttribute="trailing" secondItem="Qlc-Y0-2AQ" secondAttribute="trailing" id="cUH-NY-n3t"/>
+                            <constraint firstItem="MD6-aM-cvl" firstAttribute="centerX" secondItem="L2R-yF-yJj" secondAttribute="centerX" id="qAl-Pn-aPy"/>
+                            <constraint firstAttribute="bottom" secondItem="cjf-RS-Qwr" secondAttribute="bottom" id="tT8-gM-TTc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image recognition" id="bBj-Cm-BTV"/>
+                    <connections>
+                        <outlet property="sceneView" destination="cjf-RS-Qwr" id="079-cu-SM9"/>
+                        <outletCollection property="answerButtons" destination="zKW-2i-D10" collectionClass="NSMutableArray" id="3xr-FM-3kA"/>
+                        <outletCollection property="answerButtons" destination="6Ru-Cx-0ke" collectionClass="NSMutableArray" id="yew-wk-lK4"/>
+                        <outletCollection property="answerButtons" destination="wpP-NR-7an" collectionClass="NSMutableArray" id="xn8-yc-EcZ"/>
+                        <outletCollection property="answerButtons" destination="GXc-vB-MDK" collectionClass="NSMutableArray" id="QyA-5Z-sdI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSo-3f-xrj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948.854961832061" y="907.74647887323943"/>
         </scene>
     </scenes>
     <resources>

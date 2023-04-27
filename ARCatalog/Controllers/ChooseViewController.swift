@@ -32,14 +32,21 @@ extension ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        switch indexPath.row {
+        case 0:
             if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARFurnitureViewController") as? ARFurnitureViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-        } else if indexPath.row == 1 {
-            if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
+        case 1:
+            if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARDiceViewController") as? ARDiceViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
+        case 2:
+            if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARImageRecognitionVC") as? ARImageRecognitionVC {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        default:
+            break
         }
     }
     

@@ -19,7 +19,7 @@
 		CE6C860A29E483E900CF063C /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C860929E483E900CF063C /* FocusSquareSegment.swift */; };
 		CE6E3931299BE73F003EA329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E3930299BE73F003EA329 /* AppDelegate.swift */; };
 		CE6E3933299BE73F003EA329 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6E3932299BE73F003EA329 /* art.scnassets */; };
-		CE6E3935299BE73F003EA329 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E3934299BE73F003EA329 /* ARViewController.swift */; };
+		CE6E3935299BE73F003EA329 /* ARDiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E3934299BE73F003EA329 /* ARDiceViewController.swift */; };
 		CE6E3938299BE73F003EA329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E3936299BE73F003EA329 /* Main.storyboard */; };
 		CE6E393A299BE741003EA329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6E3939299BE741003EA329 /* Assets.xcassets */; };
 		CE6E393D299BE741003EA329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6E393B299BE741003EA329 /* LaunchScreen.storyboard */; };
@@ -35,6 +35,10 @@
 		CED4937A29A3F53600788727 /* ARFurnitureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4937929A3F53600788727 /* ARFurnitureModel.swift */; };
 		CED4937E29A3FB7B00788727 /* ARFurnitureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4937D29A3FB7B00788727 /* ARFurnitureViewController.swift */; };
 		CED4938029A3FBA200788727 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4937F29A3FBA200788727 /* ItemCell.swift */; };
+		CED7AC1D29FA7DB2003ECEA1 /* ARImageRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7AC1C29FA7DB2003ECEA1 /* ARImageRecognitionVC.swift */; };
+		CED7AC2129FAA407003ECEA1 /* quizQuetions.json in Resources */ = {isa = PBXBuildFile; fileRef = CED7AC2029FAA407003ECEA1 /* quizQuetions.json */; };
+		CED7AC2329FAB0F0003ECEA1 /* QuizQuestionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7AC2229FAB0F0003ECEA1 /* QuizQuestionObject.swift */; };
+		CED7AC2529FAB1CE003ECEA1 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7AC2429FAB1CE003ECEA1 /* QuizModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +72,7 @@
 		CE6E392D299BE73F003EA329 /* ARCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6E3930299BE73F003EA329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6E3932299BE73F003EA329 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		CE6E3934299BE73F003EA329 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		CE6E3934299BE73F003EA329 /* ARDiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDiceViewController.swift; sourceTree = "<group>"; };
 		CE6E3937299BE73F003EA329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE6E3939299BE741003EA329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6E393C299BE741003EA329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +90,10 @@
 		CED4937929A3F53600788727 /* ARFurnitureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFurnitureModel.swift; sourceTree = "<group>"; };
 		CED4937D29A3FB7B00788727 /* ARFurnitureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFurnitureViewController.swift; sourceTree = "<group>"; };
 		CED4937F29A3FBA200788727 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		CED7AC1C29FA7DB2003ECEA1 /* ARImageRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARImageRecognitionVC.swift; sourceTree = "<group>"; };
+		CED7AC2029FAA407003ECEA1 /* quizQuetions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quizQuetions.json; sourceTree = "<group>"; };
+		CED7AC2229FAB0F0003ECEA1 /* QuizQuestionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionObject.swift; sourceTree = "<group>"; };
+		CED7AC2429FAB1CE003ECEA1 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +180,7 @@
 				CED4937229A3E4F500788727 /*  Models */,
 				CE6C860229E4833500CF063C /* FocusSquare */,
 				CE6C860529E4839500CF063C /* Utilities */,
+				CED7AC1E29FAA363003ECEA1 /* Resources */,
 				CE6E3936299BE73F003EA329 /* Main.storyboard */,
 				CE6E3939299BE741003EA329 /* Assets.xcassets */,
 				CE6E393B299BE741003EA329 /* LaunchScreen.storyboard */,
@@ -200,12 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				CED4937329A3E50F00788727 /* Cells */,
-				CE6E3934299BE73F003EA329 /* ARViewController.swift */,
-				CED4937D29A3FB7B00788727 /* ARFurnitureViewController.swift */,
-				CE73D0C429E5865900B4CF22 /* ARFurnitureViewController+UICollectionView.swift */,
-				CE7E0D3A29D608E2004A197A /* ARFurnitureViewController+ARSCNViewDelegate.swift */,
-				CE145B2B29EAA9D700EB0E6A /* ARFurnitureViewController+Actions.swift */,
-				CE145B2929EAA70100EB0E6A /* ARFurnitureViewController+CoachingOverlay.swift */,
+				CE6E3934299BE73F003EA329 /* ARDiceViewController.swift */,
+				CED7AC1C29FA7DB2003ECEA1 /* ARImageRecognitionVC.swift */,
+				CED7AC1B29FA7D61003ECEA1 /* ARFurnitureVC */,
 				CED4936D29A3E24100788727 /* ChooseViewController.swift */,
 			);
 			path = Controllers;
@@ -217,6 +223,8 @@
 				CED4937529A3E52F00788727 /* OptionModel.swift */,
 				CED4937729A3F21F00788727 /* ARDiceModel.swift */,
 				CED4937929A3F53600788727 /* ARFurnitureModel.swift */,
+				CED7AC2229FAB0F0003ECEA1 /* QuizQuestionObject.swift */,
+				CED7AC2429FAB1CE003ECEA1 /* QuizModel.swift */,
 			);
 			path = " Models";
 			sourceTree = "<group>";
@@ -228,6 +236,26 @@
 				CED4937F29A3FBA200788727 /* ItemCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CED7AC1B29FA7D61003ECEA1 /* ARFurnitureVC */ = {
+			isa = PBXGroup;
+			children = (
+				CED4937D29A3FB7B00788727 /* ARFurnitureViewController.swift */,
+				CE73D0C429E5865900B4CF22 /* ARFurnitureViewController+UICollectionView.swift */,
+				CE7E0D3A29D608E2004A197A /* ARFurnitureViewController+ARSCNViewDelegate.swift */,
+				CE145B2B29EAA9D700EB0E6A /* ARFurnitureViewController+Actions.swift */,
+				CE145B2929EAA70100EB0E6A /* ARFurnitureViewController+CoachingOverlay.swift */,
+			);
+			path = ARFurnitureVC;
+			sourceTree = "<group>";
+		};
+		CED7AC1E29FAA363003ECEA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CED7AC2029FAA407003ECEA1 /* quizQuetions.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +365,7 @@
 				CE6E3933299BE73F003EA329 /* art.scnassets in Resources */,
 				CE6E393D299BE741003EA329 /* LaunchScreen.storyboard in Resources */,
 				CE6E393A299BE741003EA329 /* Assets.xcassets in Resources */,
+				CED7AC2129FAA407003ECEA1 /* quizQuetions.json in Resources */,
 				CE6E3938299BE73F003EA329 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,12 +395,13 @@
 				CED4937829A3F21F00788727 /* ARDiceModel.swift in Sources */,
 				CE145B3729EAD08600EB0E6A /* VirtualObjectLoader.swift in Sources */,
 				CE6C860A29E483E900CF063C /* FocusSquareSegment.swift in Sources */,
+				CED7AC2529FAB1CE003ECEA1 /* QuizModel.swift in Sources */,
 				CE145B2A29EAA70100EB0E6A /* ARFurnitureViewController+CoachingOverlay.swift in Sources */,
 				CE145B2E29EABA6400EB0E6A /* VirtualObjectInteraction.swift in Sources */,
 				CE145B2C29EAA9D700EB0E6A /* ARFurnitureViewController+Actions.swift in Sources */,
 				CE145B3229EABAD000EB0E6A /* VirualObject.swift in Sources */,
 				CE145B3029EABAA800EB0E6A /* VirtualObjectARView.swift in Sources */,
-				CE6E3935299BE73F003EA329 /* ARViewController.swift in Sources */,
+				CE6E3935299BE73F003EA329 /* ARDiceViewController.swift in Sources */,
 				CED4938029A3FBA200788727 /* ItemCell.swift in Sources */,
 				CE145B3529EABB5000EB0E6A /* TresholdPanGesture.swift in Sources */,
 				CED4937029A3E47600788727 /* OptionCell.swift in Sources */,
@@ -379,6 +409,8 @@
 				CE7E0D3B29D608E2004A197A /* ARFurnitureViewController+ARSCNViewDelegate.swift in Sources */,
 				CE6C860729E483BF00CF063C /* Extensions.swift in Sources */,
 				CE6E3931299BE73F003EA329 /* AppDelegate.swift in Sources */,
+				CED7AC2329FAB0F0003ECEA1 /* QuizQuestionObject.swift in Sources */,
+				CED7AC1D29FA7DB2003ECEA1 /* ARImageRecognitionVC.swift in Sources */,
 				CED4936E29A3E24100788727 /* ChooseViewController.swift in Sources */,
 				CED4937629A3E52F00788727 /* OptionModel.swift in Sources */,
 				CE6C860429E4835100CF063C /* FocusSquare.swift in Sources */,
