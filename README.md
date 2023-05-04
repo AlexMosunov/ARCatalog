@@ -4,7 +4,7 @@ AR app - catalog of furniture, built using ARKit and SceneKit.
 
 
 #Demo of object detection and interaction with 3D anumated object:
-![](https://gitlab.mobidev.biz/mosunov/arcatalog/-/blob/main/ezgif-5-416458ecf3.gif)
+![Object detection](./assets/object-detection.gif)
 
 Copyright (c) 2009-2021 MobiDev Corporation info@mobidev.biz
 This software and associated documentation files (the "Software") is intended solely for internal use by MobiDev Corporation and its authorized representatives. If you are not an authorized representative of MobiDev Corporation you must not use, disclose to third-parties, copy or retain Software or any of its parts. Please note that the Software may contain confidential, proprietary or legally privileged information. No confidentiality or privilege is waived or lost by any mistransmission.
