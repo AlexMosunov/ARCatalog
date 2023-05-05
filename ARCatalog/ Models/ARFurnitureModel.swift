@@ -8,7 +8,7 @@
 import Foundation
 
 enum FurnitureItem: String, CaseIterable {
-    case cabinet, coffee, note, candle, Doguinho, shark, BigBenTower
+    case cabinet, coffee, note, candle, Doguinho, shark, BigBenTower, whiteShark
 }
 
 struct FurnitureObject {

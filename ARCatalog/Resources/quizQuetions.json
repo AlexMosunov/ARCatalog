@@ -7,8 +7,7 @@
         "imageName": "iceland_flag",
         "description": "Hallgrímskirkja is a stunning Lutheran church located in the heart of Reykjavík, Iceland. It is one of the city's most iconic landmarks and an architectural marvel that draws visitors from all over the world.\nThe church stands at 73 meters tall and was named after Icelandic poet and clergyman Hallgrímur Pétursson. It took over 40 years to build, with construction beginning in 1945 and ending in 1986. The design of the church was inspired by Iceland's rugged landscapes and volcanic formations, with its unique shape resembling the columns of basalt rock that can be found throughout the country.",
         "is3D": false,
-        "modelName": null,
-        "answeredCorrectly":false
+        "modelName": null
     },
     "england": {
         "title": "England",
@@ -18,7 +17,16 @@
         "imageName": "england_flag",
         "description": "Big Ben is one of the most famous landmarks in London, England, known for its iconic clock tower that stands at over 96 meters tall. The tower is officially called the Elizabeth Tower, but it is commonly referred to as Big Ben after the massive bell that rings out from within the tower.\nThe clock tower was completed in 1859 and has been an important part of London's skyline ever since. Its four clock faces are the largest in the world, each measuring over 7 meters in diameter. The tower also houses a spiral staircase with over 300 steps that lead up to the top.",
         "is3D": true,
-        "modelName": "BigBenTower",
-        "answeredCorrectly":false
+        "modelName": "BigBenTower"
+    },
+    "shark": {
+        "title": "Shark",
+        "answers": ["A. 30","B. 100","C. 275","D. 350"],
+        "correctAnswer": "D",
+        "question": "How many teeth does the white shark have?",
+        "imageName": "",
+        "description": "A great white shark has around 300 teeth but only around 50 active teeth at any one time. The other 250 or so wait patiently to take their turn to viciously rip and tear at their prey and with a bite force of over 18,000N (humans have a bite force of around 1,200N), you don’t want to be in the way of a great white at feeding time…",
+        "is3D": true,
+        "modelName": "whiteShark"
     }
 }

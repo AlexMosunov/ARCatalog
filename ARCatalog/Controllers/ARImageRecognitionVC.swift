@@ -32,20 +32,19 @@ class ARImageRecognitionVC: UIViewController {
         super.viewDidLoad()
         sceneView.delegate = self
         sceneView.session.delegate = self
+        sceneView.autoenablesDefaultLighting = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // Prevent the screen from being dimmed to avoid interuppting the AR experience.
         UIApplication.shared.isIdleTimerDisabled = true
-
         // Start the AR experience
         resetTracking()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
         session.pause()
     }
     
@@ -61,7 +60,6 @@ class ARImageRecognitionVC: UIViewController {
                     self.updateARData(question: self.model.questions[name]!)
                 }
             }
-            
         } else {
             sender.tintColor = .red
         }
@@ -90,10 +88,10 @@ class ARImageRecognitionVC: UIViewController {
     }
 }
 
+// MARK: - ARSCNViewDelegate
 
 extension ARImageRecognitionVC: ARSCNViewDelegate, ARSessionDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        print("didAdd")
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let referenceImage = imageAnchor.referenceImage
         refferenceImageName = referenceImage.name
@@ -101,7 +99,6 @@ extension ARImageRecognitionVC: ARSCNViewDelegate, ARSessionDelegate {
               let question = self.model.questions[name] else { return }
         self.resetUI()
         updateQueue.async {
-            print("question - \(question)")
             // Create a plane to visualize the initial position of the detected image.
             let plane = SCNPlane(width: referenceImage.physicalSize.width,
                                  height: referenceImage.physicalSize.height)
@@ -123,14 +120,24 @@ extension ARImageRecognitionVC: ARSCNViewDelegate, ARSessionDelegate {
         var spacingY: Float = 0
 
         if question.answeredCorrectly {
-            let descriptionNode = textNode(question.description, font: UIFont.systemFont(ofSize: 7), maxWidth: 150)
+            let descriptionNode = textNode(question.description, font: UIFont.systemFont(ofSize: 5), maxWidth: 100)
             descriptionNode.pivotOnTopLeft()
             descriptionNode.position.x += 0.07 + spacingX
             descriptionNode.position.y += 0.12
             planeNode.addChildNode(descriptionNode)
+            
+            let pln = SCNPlane(width: descriptionNode.width, height: CGFloat(descriptionNode.height))
+            pln.firstMaterial?.diffuse.contents = UIColor.black.withAlphaComponent(0.5)
+            pln.firstMaterial?.isDoubleSided = true
+//            pln.cornerRadius = pln.width / 10
+            let plnNode = SCNNode(geometry: pln)
+//            plnNode.eulerAngles.x = -.pi / 2
+            plnNode.pivotOnTopLeft()
+            plnNode.position = SCNVector3(descriptionNode.position.x, descriptionNode.position.y, descriptionNode.position.z - 0.01)
+            planeNode.addChildNode(plnNode)
+            
         } else {
             for itemText in question.answers {
-                print("itemText - \(itemText)")
                 let answersTitle = self.textNode(itemText, font: UIFont.boldSystemFont(ofSize: 10))
                 answersTitle.pivotOnTopLeft()
                 answersTitle.position.x += 0.07 + spacingX
@@ -140,20 +147,17 @@ extension ARImageRecognitionVC: ARSCNViewDelegate, ARSessionDelegate {
             }
         }
         
-        let questionTitle = self.textNode(question.answeredCorrectly ? question.title : question.question, font: UIFont.boldSystemFont(ofSize: 8))
-        questionTitle.pivotOnTopCenter()
-        questionTitle.position.x -= Float(questionTitle.width / 2)
-        questionTitle.position.y += 0.15 - spacingX
+        let questionTitle = model.getQuestiontitle(question)
         planeNode.addChildNode(questionTitle)
         
-        let scene = SCNScene(named: "art.scnassets/BigBenTower.scn")!
-        if let node = scene.rootNode.childNode(withName: question.modelName ?? "", recursively: true) {
-            print("Added child node!")
-            node.position = SCNVector3(
-                x: 0,
-                y: 0,
-                z: 0.05)
-            planeNode.addChildNode(node)
+        if let objectNode = model.get3DModel(question) {
+            let initialScale = objectNode.scale
+            objectNode.scale = SCNVector3(0, 0, 0)
+            planeNode.addChildNode(objectNode)
+            objectNode.runAction(
+                SCNAction.sequence([.wait(duration: 0.2),
+                                    .scale(to: CGFloat(initialScale.x), duration: 1.0)])
+            )
         }
     }
     

@@ -45,6 +45,10 @@ extension ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSo
             if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARImageRecognitionVC") as? ARImageRecognitionVC {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
+        case 3:
+            if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARObjectRecognitionVC") as? ARObjectRecognitionVC {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         default:
             break
         }

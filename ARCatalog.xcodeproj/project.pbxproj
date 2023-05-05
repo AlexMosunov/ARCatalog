@@ -39,6 +39,7 @@
 		CED7AC2129FAA407003ECEA1 /* quizQuetions.json in Resources */ = {isa = PBXBuildFile; fileRef = CED7AC2029FAA407003ECEA1 /* quizQuetions.json */; };
 		CED7AC2329FAB0F0003ECEA1 /* QuizQuestionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7AC2229FAB0F0003ECEA1 /* QuizQuestionObject.swift */; };
 		CED7AC2529FAB1CE003ECEA1 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7AC2429FAB1CE003ECEA1 /* QuizModel.swift */; };
+		CEE310942A02832700F42A05 /* ARObjectRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE310932A02832700F42A05 /* ARObjectRecognitionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		CED7AC2029FAA407003ECEA1 /* quizQuetions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quizQuetions.json; sourceTree = "<group>"; };
 		CED7AC2229FAB0F0003ECEA1 /* QuizQuestionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionObject.swift; sourceTree = "<group>"; };
 		CED7AC2429FAB1CE003ECEA1 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		CEE310932A02832700F42A05 /* ARObjectRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARObjectRecognitionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			children = (
 				CED4937329A3E50F00788727 /* Cells */,
 				CE6E3934299BE73F003EA329 /* ARDiceViewController.swift */,
+				CEE310932A02832700F42A05 /* ARObjectRecognitionVC.swift */,
 				CED7AC1C29FA7DB2003ECEA1 /* ARImageRecognitionVC.swift */,
 				CED7AC1B29FA7D61003ECEA1 /* ARFurnitureVC */,
 				CED4936D29A3E24100788727 /* ChooseViewController.swift */,
@@ -405,6 +408,7 @@
 				CED4938029A3FBA200788727 /* ItemCell.swift in Sources */,
 				CE145B3529EABB5000EB0E6A /* TresholdPanGesture.swift in Sources */,
 				CED4937029A3E47600788727 /* OptionCell.swift in Sources */,
+				CEE310942A02832700F42A05 /* ARObjectRecognitionVC.swift in Sources */,
 				CED4937A29A3F53600788727 /* ARFurnitureModel.swift in Sources */,
 				CE7E0D3B29D608E2004A197A /* ARFurnitureViewController+ARSCNViewDelegate.swift in Sources */,
 				CE6C860729E483BF00CF063C /* Extensions.swift in Sources */,

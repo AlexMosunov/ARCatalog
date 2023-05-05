@@ -65,11 +65,12 @@ class ARDiceViewController: UIViewController, ARSCNViewDelegate {
                 if let hitResult = results.first {
                     if let diceNode = model.addDice(
                         x: hitResult.worldTransform.columns.3.x,
-                        y: hitResult.worldTransform.columns.3.y,
+                        y: hitResult.worldTransform.columns.3.y + 0.01,
                         z: hitResult.worldTransform.columns.3.z
                     ) {
                         sceneView.scene.rootNode.addChildNode(diceNode)
                         model.rotateDice(node: diceNode)
+                        navigationItem.title = "Shake the device to roll dice"
                     }
                 }
             }
@@ -93,7 +94,7 @@ class ARDiceViewController: UIViewController, ARSCNViewDelegate {
         )
         // create SCNMaterial
         let gridMaterial = SCNMaterial()
-        gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/grid.png")
+        gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/casino.jpeg")
         plane.materials = [gridMaterial]
         // create SCNNode
         let planeNode = SCNNode(geometry: plane)
