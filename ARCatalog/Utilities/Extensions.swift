@@ -99,3 +99,52 @@ extension SCNNode {
         pivot = SCNMatrix4MakeTranslation(0, max.y, 0)
     }
 }
+
+extension SCNNode {
+    public class func getNode(named: String, from file: String? = nil) -> SCNNode? {
+        var objectUrl: URL?
+        let modelsURL = Bundle.main.url(forResource: "art.scnassets", withExtension: nil)!
+        let fileEnumerator = FileManager().enumerator(at: modelsURL, includingPropertiesForKeys: [])!
+        
+        _ = fileEnumerator.map { element in
+            let url = element as! URL
+            
+            if url.pathExtension == "scn" && url.path.contains(named) {
+                print("DEBUG: url - \(url)")
+                objectUrl = url
+            }
+        }
+        guard let objectUrl = objectUrl else { return nil }
+        do {
+            let objectScene = try SCNScene(url: objectUrl)
+            print("DEBUG: scene")
+            if let node = objectScene.rootNode.childNode(withName: named, recursively: true) {
+                print("DEBUG: node")
+                return node
+            }
+        } catch(let error) {
+            print(error)
+        }
+        return nil
+    }
+}
+
+extension SCNReferenceNode {
+    convenience init(named resourceName: String, loadImmediately: Bool = true) {
+        let url = Bundle.main.url(forResource: resourceName, withExtension: "scn", subdirectory: "art.scnassets")!
+        self.init(url: url)!
+        if loadImmediately {
+            self.load()
+        }
+    }
+}
+
+extension Array where Element: Equatable {
+    func nextElement(after element: Element) -> Element? {
+        guard let currentIndex = self.firstIndex(of: element),
+                  currentIndex + 1 < self.count else {
+            return self.first
+        }
+        return self[currentIndex + 1]
+    }
+}

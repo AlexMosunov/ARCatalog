@@ -81,6 +81,8 @@
                         <segue destination="BV1-FR-VrT" kind="show" id="Rq8-pc-TGF"/>
                         <segue destination="95E-8d-Wyn" kind="show" id="D9N-8k-byU"/>
                         <segue destination="nuA-9y-OuH" kind="show" id="tUS-C8-cXA"/>
+                        <segue destination="HMb-ai-CgD" kind="show" id="wP2-m4-V4g"/>
+                        <segue destination="ZFr-nc-Fmu" kind="show" id="Y1S-7B-XRw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsZ-Hl-Fas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -133,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="155"/>
+            <point key="canvasLocation" x="1948.854961832061" y="154.92957746478874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ikJ-BB-NrY">
@@ -343,7 +345,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSo-3f-xrj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948.854961832061" y="907.74647887323943"/>
+            <point key="canvasLocation" x="1949" y="842"/>
+        </scene>
+        <!--Face Recognition-->
+        <scene sceneID="dvK-e8-LTS">
+            <objects>
+                <viewController storyboardIdentifier="ARFaceRecognitionVC" id="ZFr-nc-Fmu" customClass="ARFaceRecognitionVC" customModule="ARCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wWQ-xR-EBH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1AB-1Z-Mdk">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Pb-x2-GOF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1AB-1Z-Mdk" firstAttribute="trailing" secondItem="9Pb-x2-GOF" secondAttribute="trailing" id="5hu-UO-y5h"/>
+                            <constraint firstItem="1AB-1Z-Mdk" firstAttribute="leading" secondItem="9Pb-x2-GOF" secondAttribute="leading" id="KKc-og-5eu"/>
+                            <constraint firstAttribute="bottom" secondItem="1AB-1Z-Mdk" secondAttribute="bottom" id="fwB-KY-Cf3"/>
+                            <constraint firstItem="1AB-1Z-Mdk" firstAttribute="top" secondItem="wWQ-xR-EBH" secondAttribute="top" id="yok-Zd-bMi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Face Recognition" id="tOZ-o9-9fc"/>
+                    <connections>
+                        <outlet property="sceneView" destination="1AB-1Z-Mdk" id="lAO-YS-fgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgg-Gf-BVD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209.92366412213741" y="855.63380281690149"/>
+        </scene>
+        <!--Object Recognition-->
+        <scene sceneID="ShO-sN-gnl">
+            <objects>
+                <viewController storyboardIdentifier="ARObjectRecognitionVC" id="HMb-ai-CgD" customClass="ARObjectRecognitionVC" customModule="ARCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9u2-tr-E6V">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXh-em-8M2">
+                                <rect key="frame" x="287.66666666666669" y="733" width="65.333333333333314" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Swim"/>
+                                <connections>
+                                    <action selector="swimActionTapped:" destination="HMb-ai-CgD" eventType="touchUpInside" id="uoX-QL-Fhv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlp-dr-q0E">
+                                <rect key="frame" x="40" y="733" width="67" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Jump"/>
+                                <connections>
+                                    <action selector="jumpActionTapped:" destination="HMb-ai-CgD" eventType="touchUpInside" id="SPL-t7-DaM"/>
+                                </connections>
+                            </button>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyO-az-9wL">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PBy-0l-6qE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FyO-az-9wL" firstAttribute="trailing" secondItem="PBy-0l-6qE" secondAttribute="trailing" id="0Ym-oT-Obf"/>
+                            <constraint firstItem="PBy-0l-6qE" firstAttribute="bottom" secondItem="DXh-em-8M2" secondAttribute="bottom" constant="50" id="FeX-Hg-CnK"/>
+                            <constraint firstItem="FyO-az-9wL" firstAttribute="top" secondItem="9u2-tr-E6V" secondAttribute="top" id="UFF-Ev-7L9"/>
+                            <constraint firstAttribute="bottom" secondItem="FyO-az-9wL" secondAttribute="bottom" id="ndq-90-L6z"/>
+                            <constraint firstItem="PBy-0l-6qE" firstAttribute="bottom" secondItem="Wlp-dr-q0E" secondAttribute="bottom" constant="50" id="pc4-cz-wFJ"/>
+                            <constraint firstItem="FyO-az-9wL" firstAttribute="leading" secondItem="PBy-0l-6qE" secondAttribute="leading" id="pm4-NT-2Lp"/>
+                            <constraint firstItem="PBy-0l-6qE" firstAttribute="trailing" secondItem="DXh-em-8M2" secondAttribute="trailing" constant="40" id="zJX-9e-Ugb"/>
+                            <constraint firstItem="Wlp-dr-q0E" firstAttribute="leading" secondItem="PBy-0l-6qE" secondAttribute="leading" constant="40" id="zZ0-If-Nue"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Object Recognition" id="gQ0-95-yuX"/>
+                    <connections>
+                        <outlet property="sceneView" destination="FyO-az-9wL" id="Ds4-TB-Bdn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeZ-oO-4Bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049.6183206106871" y="841.54929577464793"/>
         </scene>
     </scenes>
     <resources>

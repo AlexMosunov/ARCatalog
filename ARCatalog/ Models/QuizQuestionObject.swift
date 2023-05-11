@@ -17,4 +17,9 @@ struct QuizQuestionObject: Decodable {
     let is3D: Bool
     let modelName: String?
     var answeredCorrectly:Bool = false
+    enum CodingKeys: String, CodingKey {
+        case title,answers,correctAnswer,
+             question,imageName,description,
+             is3D,modelName
+    }
 }

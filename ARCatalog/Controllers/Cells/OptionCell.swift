@@ -18,7 +18,6 @@ class OptionCell: UICollectionViewCell {
         layer.cornerRadius = 10
     }
     func update(model: Option) {
-        print("model - \(model)")
         imageView.image = model.image
         label.text = model.labelName
     }
