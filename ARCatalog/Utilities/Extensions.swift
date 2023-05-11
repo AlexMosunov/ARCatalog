@@ -128,3 +128,23 @@ extension SCNNode {
         return nil
     }
 }
+
+extension SCNReferenceNode {
+    convenience init(named resourceName: String, loadImmediately: Bool = true) {
+        let url = Bundle.main.url(forResource: resourceName, withExtension: "scn", subdirectory: "art.scnassets")!
+        self.init(url: url)!
+        if loadImmediately {
+            self.load()
+        }
+    }
+}
+
+extension Array where Element: Equatable {
+    func nextElement(after element: Element) -> Element? {
+        guard let currentIndex = self.firstIndex(of: element),
+                  currentIndex + 1 < self.count else {
+            return self.first
+        }
+        return self[currentIndex + 1]
+    }
+}

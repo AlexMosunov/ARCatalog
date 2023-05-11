@@ -28,6 +28,7 @@
 		CE6E3953299BE742003EA329 /* ARCatalogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E3952299BE742003EA329 /* ARCatalogUITestsLaunchTests.swift */; };
 		CE73D0C529E5865900B4CF22 /* ARFurnitureViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73D0C429E5865900B4CF22 /* ARFurnitureViewController+UICollectionView.swift */; };
 		CE7E0D3B29D608E2004A197A /* ARFurnitureViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E0D3A29D608E2004A197A /* ARFurnitureViewController+ARSCNViewDelegate.swift */; };
+		CEC1EAFB2A0A7A6E00F8DBE8 /* ARFaceRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1EAF92A0A7A6E00F8DBE8 /* ARFaceRecognitionVC.swift */; };
 		CED4936E29A3E24100788727 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4936D29A3E24100788727 /* ChooseViewController.swift */; };
 		CED4937029A3E47600788727 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4936F29A3E47600788727 /* OptionCell.swift */; };
 		CED4937629A3E52F00788727 /* OptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4937529A3E52F00788727 /* OptionModel.swift */; };
@@ -84,6 +85,7 @@
 		CE6E3952299BE742003EA329 /* ARCatalogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCatalogUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE73D0C429E5865900B4CF22 /* ARFurnitureViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARFurnitureViewController+UICollectionView.swift"; sourceTree = "<group>"; };
 		CE7E0D3A29D608E2004A197A /* ARFurnitureViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARFurnitureViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		CEC1EAF92A0A7A6E00F8DBE8 /* ARFaceRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFaceRecognitionVC.swift; sourceTree = "<group>"; };
 		CED4936D29A3E24100788727 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		CED4936F29A3E47600788727 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 		CED4937529A3E52F00788727 /* OptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionModel.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				CED7AC1C29FA7DB2003ECEA1 /* ARImageRecognitionVC.swift */,
 				CED7AC1B29FA7D61003ECEA1 /* ARFurnitureVC */,
 				CED4936D29A3E24100788727 /* ChooseViewController.swift */,
+				CEC1EAF92A0A7A6E00F8DBE8 /* ARFaceRecognitionVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				CE145B2A29EAA70100EB0E6A /* ARFurnitureViewController+CoachingOverlay.swift in Sources */,
 				CE145B2E29EABA6400EB0E6A /* VirtualObjectInteraction.swift in Sources */,
 				CE145B2C29EAA9D700EB0E6A /* ARFurnitureViewController+Actions.swift in Sources */,
+				CEC1EAFB2A0A7A6E00F8DBE8 /* ARFaceRecognitionVC.swift in Sources */,
 				CE145B3229EABAD000EB0E6A /* VirualObject.swift in Sources */,
 				CE145B3029EABAA800EB0E6A /* VirtualObjectARView.swift in Sources */,
 				CE6E3935299BE73F003EA329 /* ARDiceViewController.swift in Sources */,

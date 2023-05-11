@@ -31,7 +31,7 @@ extension ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return cell ?? UICollectionViewCell()
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { //TODO: refactor
         switch indexPath.row {
         case 0:
             if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARFurnitureViewController") as? ARFurnitureViewController {
@@ -47,6 +47,10 @@ extension ChooseViewController: UICollectionViewDelegate, UICollectionViewDataSo
             }
         case 3:
             if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARObjectRecognitionVC") as? ARObjectRecognitionVC {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case 4:
+            if let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ARFaceRecognitionVC") as? ARFaceRecognitionVC {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         default:

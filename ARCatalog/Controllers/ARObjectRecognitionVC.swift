@@ -65,11 +65,6 @@ class ARObjectRecognitionVC: UIViewController {
 extension ARObjectRecognitionVC: ARSCNViewDelegate, ARSessionDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let objectAnchor = anchor as? ARObjectAnchor else { return }
-        print("objectAnchor - \(objectAnchor.referenceObject)")
-        print("!!! NAME - \(objectAnchor.referenceObject.name)")
-        print("objectAnchor.referenceObject.extent.x - \(objectAnchor.referenceObject.extent.x)")
-        print("objectAnchor.referenceObject.extent.x - \(objectAnchor.referenceObject.extent.y)")
-        //            node.addChildNode(self.model)
         updateQueue.async {
             let plane = SCNPlane(width: CGFloat(objectAnchor.referenceObject.extent.x),
                                  height: CGFloat(objectAnchor.referenceObject.extent.y))
